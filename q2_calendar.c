@@ -18,7 +18,8 @@ void print_newline() {
 
 void print_separator_row(int width) {
     print_row_delimiter();
-    for(int i = 0; i < width-2; i++) {
+    int i;
+    for(i = 0; i < width-2; i++) {
       printf("-");
     }
     print_row_delimiter();
@@ -35,7 +36,8 @@ void print_days_row(int day_size, int width) {
     char* days[7] = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
 
     print_row_delimiter();
-    for(int i = 0; i < 7; i++){
+    int i;
+    for(i = 0; i < 7; i++){
       printf(" %-*.*s |", day_size, day_size, days[i]);
     }
     print_newline();
@@ -121,8 +123,9 @@ int main(int argc, char* argv[]) {
 
   int width = (day_size + 3) * 7 + 1;
   int start_index = first_day;
+  int i;
 
-  for(int i = 0; i < 12; i++){
+  for(i = 0; i < 12; i++){
     print_month_row(width, i);
     print_days_row(day_size, width);
 
