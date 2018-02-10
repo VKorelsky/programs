@@ -27,7 +27,8 @@ void print_separator_row(int width) {
 }
 
 void print_whitespace(int width) {
-    for(int i = 0; i < width; i++){
+    int i;
+    for(i = 0; i < width; i++){
         printf(" ");
     }
 }
